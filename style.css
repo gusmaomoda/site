@@ -1,9 +1,7 @@
-@import "tailwindcss";
-
 /* Typography from Google Fonts - Cormorant Garamond (refined serif) and Montserrat (modern sans-serif) */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-@theme {
+:root {
   --font-serif: "Cormorant Garamond", serif;
   --font-sans: "Montserrat", sans-serif;
   
@@ -14,22 +12,6 @@
   --soft-beige: #EADBC8;
   --white: #FFFFFF;
   --accent-pink: #F5E6E8;
-  
-  /* Map legacy theme colors to the Natural Tones equivalents for absolute layout parity */
-  --color-gold-50: #FAF9F6;
-  --color-gold-100: #EADBC8;
-  --color-gold-200: #DFCEB9;
-  --color-gold-300: #D0BA9C;
-  --color-gold-400: #C5A059;
-  --color-gold-500: #C5A059; /* Brand Core Gold */
-  --color-gold-600: #B28E4E;
-  --color-gold-700: #9B773E;
-  --color-gold-800: #5C4725;
-  --color-gold-900: #2D2926; /* Brand Core Ink */
-  
-  --color-rose-50: #FAF9F6;
-  --color-rose-100: #F5E6E8; /* Soft Accent Pink */
-  --color-rose-300: #D8BEDF;
 }
 
 /* Base resets & styles matching Natural Tones design details */
@@ -41,7 +23,7 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, .font-serif-luxury {
+h1, h2, h3, h4, .font-serif {
   font-family: var(--font-serif);
 }
 

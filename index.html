@@ -9,7 +9,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
     <!-- Link to global styling with Tailwind integration -->
-    <link rel="stylesheet" href="/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', 'serif'],
+              sans: ['"Montserrat"', 'sans-serif'],
+            },
+            colors: {
+              gold: {
+                DEFAULT: '#C5A059',
+                50: '#FAF9F6',
+                100: '#EADBC8',
+                200: '#DFCEB9',
+                300: '#D0BA9C',
+                400: '#C5A059',
+                500: '#C5A059',
+                600: '#B28E4E',
+                700: '#9B773E',
+                800: '#5C4725',
+                900: '#2D2926',
+              },
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body class="bg-[#FAF7F2] text-[#373330] antialiased">
 
@@ -752,6 +780,6 @@
     </footer>
 
     <!-- Link to basic Javascript interactive rules -->
-    <script type="module" src="/script.js"></script>
+    <script src="./script.js" defer></script>
   </body>
 </html>
