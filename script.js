@@ -4,12 +4,20 @@
  * scroll suave, animações e o botão flutuante de contatos (FAB).
  */
 
+// Adiciona a classe js-ready imediatamente para ativar os estilos de reveal apenas com JS funcionando
+if (document.body) {
+  document.body.classList.add('js-ready');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  // Se o body por acaso não tiver pego no carregamento inicial rápido, garante aqui
+  document.body.classList.add('js-ready');
+
   // --- INICIALIZAÇÃO DE ANIMAÇÕES DE REVELAÇÃO (Scroll Reveal) ---
   const revealElements = document.querySelectorAll('.reveal');
   
   const revealOnScroll = () => {
-    const triggerBottom = (window.innerHeight / 10) * 8.5; // revela um pouco antes de chegar no meio da tela
+    const triggerBottom = window.innerHeight * 0.92; // ativa quando o topo do elemento chega em 92% da tela
     revealElements.forEach(element => {
       const elementTop = element.getBoundingClientRect().top;
       if (elementTop < triggerBottom) {
@@ -21,6 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Executa uma vez no início para checar elementos já visíveis e depois no scroll
   revealOnScroll();
   window.addEventListener('scroll', revealOnScroll);
+
+  // Fallback de segurança: revela tudo após 1.2 segundos para garantir usabilidade total sob qualquer circunstância
+  setTimeout(() => {
+    revealElements.forEach(element => {
+      element.classList.add('active');
+    });
+  }, 1200);
 
 
   // --- MENU RESPONSIVO MOBILE ---

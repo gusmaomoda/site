@@ -104,15 +104,18 @@ h1, h2, h3, h4, .font-serif {
   transform: scale(1.04);
 }
 
-/* Scroll Fade Animations classes for viewport reveals */
+/* Scroll Fade Animations classes for viewport reveals (made bulletproof with js-ready checks) */
 .reveal {
-  opacity: 0;
-  transform: translateY(20px);
   transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
   will-change: opacity, transform;
 }
 
-.reveal.active {
+.js-ready .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.js-ready .reveal.active {
   opacity: 1;
   transform: translateY(0);
 }
