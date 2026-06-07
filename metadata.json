@@ -1,0 +1,6 @@
+{
+  "name": "Gusmão Moda Feminina",
+  "description": "Site elegante, moderno e responsivo para a loja Gusmão Moda Feminina em Guarulhos - SP, apresentando coleções de moda feminina, avaliações Google 5 estrelas e contato via WhatsApp e Instagram.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

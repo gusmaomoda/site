@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gusmão Moda Feminina | Elegância, Estilo e Confiança em Guarulhos</title>
+    <!-- Preconnect to Google Fonts for performance optimize -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Link to global styling with Tailwind integration -->
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="bg-[#FAF7F2] text-[#373330] antialiased">
+
+    <!-- 1. HEADER / NAVBAR -->
+    <header class="sticky top-0 z-50 w-full border-b border-[#E7DAC1]/50 bg-[#FAF7F2]/90 backdrop-blur-md transition-all duration-300">
+      <div id="nav-container" class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 md:px-8">
+        
+        <!-- Logo Branding -->
+        <a id="logo-link" href="#inicio" class="group flex flex-col items-start gap-0.5">
+          <span class="font-serif text-2xl font-semibold tracking-wide text-[#513E2B] transition-colors duration-300 group-hover:text-[#BFA17A] md:text-3xl">Gusmão</span>
+          <span class="text-[9px] font-medium tracking-[0.25em] uppercase text-[#AA8961]">Moda Feminina</span>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav id="desktop-nav" class="hidden items-center gap-8 md:flex">
+          <a href="#inicio" class="menu-link text-[11px] font-semibold tracking-widest uppercase text-[#513E2B] transition-colors duration-300 hover:text-[#BFA17A]">Início</a>
+          <a href="#sobre" class="menu-link text-[11px] font-semibold tracking-widest uppercase text-[#513E2B] transition-colors duration-300 hover:text-[#BFA17A]">Sobre Nós</a>
+          <a href="#produtos" class="menu-link text-[11px] font-semibold tracking-widest uppercase text-[#513E2B] transition-colors duration-300 hover:text-[#BFA17A]">Produtos</a>
+          <a href="#avaliacoes" class="menu-link text-[11px] font-semibold tracking-widest uppercase text-[#513E2B] transition-colors duration-300 hover:text-[#BFA17A]">Avaliações</a>
+          <a href="#localizacao" class="menu-link text-[11px] font-semibold tracking-widest uppercase text-[#513E2B] transition-colors duration-300 hover:text-[#BFA17A]">Localização</a>
+          <a href="#contato" class="menu-link text-[11px] font-semibold tracking-widest uppercase text-[#513E2B] transition-colors duration-300 hover:text-[#BFA17A]">Contato</a>
+        </nav>
+
+        <!-- CTAs Header Desktop -->
+        <div id="desktop-ctas" class="hidden items-center gap-4 lg:flex">
+          <a id="header-insta-link" href="https://www.instagram.com/gusmaomodafeminina/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-[#DAC3A4] p-2 text-[#513E2B] hover:bg-[#E7DAC1]/30 transition-all duration-300">
+            <!-- Instagram Icon inline SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a id="header-whats-link" href="https://wa.me/5511962589548?text=Olá!+Gostaria+de+conhecer+as+coleções+disponíveis." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 rounded-full bg-[#BFA17A] px-5 py-2.5 text-[11px] font-bold tracking-widest uppercase text-white shadow-md transition-all duration-300 hover:bg-[#AA8961] hover:shadow-lg">
+            <span>WhatsApp</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Mobile Dynamic Hamburger Trigger -->
+        <button id="menu-btn" class="flex items-center justify-center p-2 text-[#513E2B] transition-colors hover:text-[#BFA17A] md:hidden" aria-label="Menu principal">
+          <!-- Hamburger closed icon -->
+          <svg id="menu-icon-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Menu opened X cross icon -->
+          <svg id="menu-icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+      </div>
+
+      <!-- Mobile Navigation Drawer Overlay Sliding -->
+      <div id="mobile-menu" class="fixed top-20 right-0 z-40 h-[calc(100vh-80px)] w-full translate-x-full border-l border-[#E7DAC1]/50 bg-[#FAF7F2] px-8 py-10 transition-transform duration-300 ease-in-out md:hidden shadow-lg">
+        <nav class="flex flex-col gap-6 text-center">
+          <a href="#inicio" class="border-b border-[#E7DAC1]/30 pb-3 text-sm font-semibold tracking-widest uppercase text-[#513E2B]">Início</a>
+          <a href="#sobre" class="border-b border-[#E7DAC1]/30 pb-3 text-sm font-semibold tracking-widest uppercase text-[#513E2B]">Sobre Nós</a>
+          <a href="#produtos" class="border-b border-[#E7DAC1]/30 pb-3 text-sm font-semibold tracking-widest uppercase text-[#513E2B]">Produtos</a>
+          <a href="#avaliacoes" class="border-b border-[#E7DAC1]/30 pb-3 text-sm font-semibold tracking-widest uppercase text-[#513E2B]">Avaliações</a>
+          <a href="#localizacao" class="border-b border-[#E7DAC1]/30 pb-3 text-sm font-semibold tracking-widest uppercase text-[#513E2B]">Localização</a>
+          <a href="#contato" class="border-b border-[#E7DAC1]/30 pb-3 text-sm font-semibold tracking-widest uppercase text-[#513E2B]">Contato</a>
+        </nav>
+        
+        <div class="mt-10 flex flex-col gap-4 text-center">
+          <p class="text-xs font-medium tracking-wide text-[#AA8961]">VISITE NOSSAS REDES</p>
+          <div class="flex justify-center gap-4">
+            <a href="https://www.instagram.com/gusmaomodafeminina/" target="_blank" rel="noopener noreferrer" class="flex h-12 w-12 items-center justify-center rounded-full border border-[#DAC3A4] text-[#513E2B] hover:bg-[#E7DAC1]/20">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://wa.me/5511962589548?text=Olá!" target="_blank" rel="noopener noreferrer" class="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-md">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. HERO / INÍCIO -->
+    <section id="inicio" class="relative overflow-hidden bg-gradient-to-b from-[#F3EDD9]/40 to-[#FAF7F2] py-16 md:py-24">
+      <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 md:grid-cols-2 md:px-8">
+        
+        <!-- Hero Text Details -->
+        <div class="flex flex-col items-start gap-6 text-left reveal">
+          <div class="flex items-center gap-2 rounded-full border border-[#C9AA83]/40 bg-[#FAF7F2] px-4 py-1.5 text-xs font-semibold tracking-widest uppercase text-[#AA8961]">
+            <span class="inline-block h-2 w-2 rounded-full bg-[#BFA17A] animate-pulse"></span>
+            Exclusividade & Conforto
+          </div>
+          <h1 class="font-serif text-4xl font-normal leading-tight tracking-tight text-[#513E2B] lg:text-5xl xl:text-6xl">
+            Moda feminina para <span class="italic text-[#BFA17A]">todos</span> os momentos.
+          </h1>
+          <p class="max-w-md text-sm leading-relaxed text-[#6E543A] md:text-base">
+            Moda feminina selecionada com muito amor para valorizar você em todos os momentos com conforto e beleza única.
+          </p>
+          
+          <!-- CTA Action Row buttons -->
+          <div class="flex flex-col sm:flex-row w-full sm:w-auto items-stretch sm:items-center gap-4 mt-2">
+            <a id="hero-whats-btn" href="https://wa.me/5511962589548?text=Olá!+Vim+pelo+site+e+gostaria+de+conhecer+as+novidades." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 rounded-full bg-[#BFA17A] px-8 py-4 text-xs font-bold tracking-widest uppercase text-white shadow-md transition-all duration-300 hover:bg-[#AA8961] hover:shadow-lg hover:-translate-y-0.5">
+              <!-- WhatsApp Solid SVG Icon -->
+              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.388 2.036 13.91 1.01 11.99 1.01c-5.433 0-9.849 4.367-9.854 9.796-.002 2.012.528 3.977 1.538 5.734l-.992 3.616 3.754-.972zm12.181-7.062c-.267-.134-1.58-.779-1.827-.869-.246-.09-.427-.134-.607.134-.18.268-.696.869-.852 1.048-.157.179-.313.201-.58.067-.268-.134-1.13-.417-2.152-1.325-.794-.707-1.33-1.581-1.486-1.849-.156-.268-.017-.413.117-.547.12-.12.268-.313.402-.47.134-.156.179-.268.268-.446.09-.179.045-.335-.022-.47-.067-.134-.607-1.462-.832-2.001-.219-.524-.46-.452-.631-.461-.164-.008-.353-.01-.542-.01-.19 0-.501.071-.762.353-.262.282-1.002.979-1.002 2.387s1.025 2.766 1.17 2.956c.145.19 2.016 3.08 4.885 4.315.682.293 1.214.469 1.63.601.687.218 1.312.187 1.806.114.55-.082 1.58-.646 1.802-1.266.223-.62.223-1.152.156-1.262-.067-.11-.246-.19-.513-.324z"></path>
+              </svg>
+              <span>Falar no WhatsApp</span>
+            </a>
+            <a id="hero-insta-btn" href="https://www.instagram.com/gusmaomodafeminina/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 rounded-full border border-[#BFA17A] bg-transparent px-8 py-4 text-xs font-bold tracking-widest uppercase text-[#513E2B] transition-all duration-300 hover:bg-[#BFA17A]/10 hover:-translate-y-0.5">
+              <svg class="h-4 w-4 text-[#BFA17A]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              <span>Ver Instagram</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Elegant Frame Showcase with generated boutique images -->
+        <div class="relative flex justify-center reveal">
+          <div class="absolute -top-4 -left-4 h-full w-full rounded-2xl border border-[#E7DAC1] bg-[#FAF7F2]"></div>
+          <div class="relative overflow-hidden rounded-2xl bg-white p-3 shadow-gold-soft">
+            <img class="max-h-[460px] w-full rounded-xl object-cover transition-all duration-500 hover:scale-[1.02]" 
+                 src="./assets/images/gusmao_hero_banner_1780868233987.png" 
+                 alt="Arara de roupas em estilo boutique e moderno, com casacos e conjuntos em tons neutros, bege, branco e dourado"
+                 referrerPolicy="no-referrer" />
+            <div class="absolute bottom-6 left-6 flex items-center gap-3 rounded-lg bg-[#FAF7F2]/90 backdrop-blur-md px-4 py-2 border border-[#E7DAC1]/50">
+              <span class="flex text-[#BFA17A]">
+                <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </span>
+              <span class="text-xs font-bold leading-none tracking-wider text-[#513E2B]">NOTA 5.0 GOOGLE</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. SOBRE A LOJA -->
+    <section id="sobre" class="bg-[#FEF8F8] py-20 border-t border-[#E7DAC1]/30">
+      <div class="mx-auto max-w-7xl px-6 md:px-8">
+        
+        <div class="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:items-center">
+          
+          <!-- Copy Section Left (Lighter text blocks) -->
+          <div class="lg:col-span-7 flex flex-col items-start gap-6 reveal">
+            <span class="text-xs font-bold tracking-[0.2em] uppercase text-[#BFA17A]">NOSSA HISTÓRIA</span>
+            <h2 class="font-serif text-3xl font-normal leading-tight text-[#513E2B] md:text-4xl lg:text-5xl">
+              Estilo e carinho para valorizar sua <span class="italic font-serif text-[#BFA17A] block sm:inline">melhor versão</span>.
+            </h2>
+            <div class="h-0.5 w-16 bg-[#BFA17A] rounded"></div>
+            
+            <p class="text-sm leading-relaxed text-[#6E543A] md:text-base">
+              A <strong>Gusmão Moda Feminina</strong> oferece peças selecionadas de alta qualidade e com preço justo em Guarulhos. Nossa loja física é um espaço aconchegante feito para você se sentir em casa.
+            </p>
+            <p class="text-sm leading-relaxed text-[#6E543A]">
+              Especialistas em moda feminina, temos vestidos versáteis, conjuntos modernos, looks casuais do dia a dia, moda fitness, lingerie e novidades semanais exclusivas prontas para você.
+            </p>
+          </div>
+
+          <!-- Feature Pillars Right side -->
+          <div class="lg:col-span-5 grid grid-cols-1 gap-6 reveal">
+            
+            <!-- Pillar 1 -->
+            <div class="flex items-start gap-4 rounded-xl border border-[#E7DAC1]/40 bg-[#FAF7F2] p-6 shadow-gold-soft transition-all duration-300 hover:border-[#BFA17A]/50">
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#FAF2E8] text-[#BFA17A]">
+                <!-- Heart icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-[#513E2B]">Atendimento Acolhedor</h3>
+                <p class="mt-1 text-xs leading-relaxed text-[#6E543A]">Tratamos cada cliente de forma única e humanizada. Um ambiente aconchegante para você se sentir em casa.</p>
+              </div>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="flex items-start gap-4 rounded-xl border border-[#E7DAC1]/40 bg-[#FAF7F2] p-6 shadow-gold-soft transition-all duration-300 hover:border-[#BFA17A]/50">
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#FAF2E8] text-[#BFA17A]">
+                <!-- Shield icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-[#513E2B]">Qualidade & Curadoria</h3>
+                <p class="mt-1 text-xs leading-relaxed text-[#6E543A]">Peças selecionadas a dedo, com costuras firmes, tecidos confortáveis e alta durabilidade que vestem com perfeição.</p>
+              </div>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="flex items-start gap-4 rounded-xl border border-[#E7DAC1]/40 bg-[#FAF7F2] p-6 shadow-gold-soft transition-all duration-300 hover:border-[#BFA17A]/50">
+              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#FAF2E8] text-[#BFA17A]">
+                <!-- Tag price icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-[#513E2B]">Variedade & Preço Justo</h3>
+                <p class="mt-1 text-xs leading-relaxed text-[#6E543A]">Preços acessíveis com um estoque diversificado de tamanhos e modelos para que toda mulher expresse seu próprio brilho.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. PRODUTOS / CATEGORIAS -->
+    <section id="produtos" class="py-20">
+      <div class="mx-auto max-w-7xl px-6 md:px-8">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col items-center text-center gap-4 mb-16 reveal">
+          <span class="text-xs font-bold tracking-[0.2em] uppercase text-[#BFA17A]">NOSSAS CATEGORIAS</span>
+          <h2 class="font-serif text-3xl font-normal text-[#513E2B] md:text-4xl lg:text-5xl">Estoque & Inspirações</h2>
+          <div class="h-0.5 w-16 bg-[#BFA17A] rounded mb-2"></div>
+          <p class="max-w-md text-sm text-[#6E543A] leading-relaxed">
+            Encontre o look ideal para qualquer momento da sua rotina ou ocasiões especiais.
+          </p>
+        </div>
+
+        <!-- Categories grid -->
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 reveal">
+          
+          <!-- Category Card 1 (Vestidos) -->
+          <div class="zoom-container group relative flex flex-col overflow-hidden rounded-2xl border border-[#E7DAC1]/40 bg-white shadow-gold-soft transition-all duration-300 hover:border-[#BFA17A]/50 hover:shadow-gold-medium">
+            <div class="relative h-72 w-full overflow-hidden bg-gray-100">
+              <img class="zoom-image h-full w-full object-cover" 
+                   src="./assets/imgs/vestidos.jpg" 
+                   alt="Vestidos elegantes Gusmão Moda Feminina"
+                   referrerPolicy="no-referrer" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute top-4 left-4 rounded-full bg-[#FAF7F2] px-3.5 py-1 text-[10px] font-bold tracking-widest uppercase text-[#AA8961]">Coleção</span>
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="font-serif text-xl font-normal text-[#513E2B] transition-colors group-hover:text-[#BFA17A]">Vestidos</h3>
+              <p class="mt-2 text-xs leading-relaxed text-[#6E543A]">Modelos fluidos, midis e longos ideais para festas ou passeios casuais.</p>
+              <div class="mt-auto pt-6">
+                <a href="https://wa.me/5511962589548?text=Olá!+Gostaria+de+informações+sobre+os+Vestidos+da+loja." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold tracking-widest uppercase text-[#BFA17A] transition-colors hover:text-[#513E2B]">
+                  <span>Tenho Interesse</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category Card 2 (Conjuntos) -->
+          <div class="zoom-container group relative flex flex-col overflow-hidden rounded-2xl border border-[#E7DAC1]/40 bg-white shadow-gold-soft transition-all duration-300 hover:border-[#BFA17A]/50 hover:shadow-gold-medium">
+            <div class="relative h-72 w-full overflow-hidden bg-gray-100">
+              <img class="zoom-image h-full w-full object-cover" 
+                   src="./assets/imgs/conjuntos.jpg" 
+                   alt="Conjuntos sofisticados Gusmão Moda Feminina"
+                   referrerPolicy="no-referrer" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute top-4 left-4 rounded-full bg-[#FAF7F2] px-3.5 py-1 text-[10px] font-bold tracking-widest uppercase text-[#AA8961]">Elegantes</span>
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="font-serif text-xl font-normal text-[#513E2B] transition-colors group-hover:text-[#BFA17A]">Conjuntos</h3>
+              <p class="mt-2 text-xs leading-relaxed text-[#6E543A]">Opções modernas em alfaiataria, linho e moletinho para um look refinado e prático.</p>
+              <div class="mt-auto pt-6">
+                <a href="https://wa.me/5511962589548?text=Olá!+Gostaria+de+informações+sobre+os+Conjuntos+da+loja." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold tracking-widest uppercase text-[#BFA17A] transition-colors hover:text-[#513E2B]">
+                  <span>Tenho Interesse</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category Card 3 (Shorts) -->
+          <div class="zoom-container group relative flex flex-col overflow-hidden rounded-2xl border border-[#E7DAC1]/40 bg-white shadow-gold-soft transition-all duration-300 hover:border-[#BFA17A]/50 hover:shadow-gold-medium">
+            <div class="relative h-72 w-full overflow-hidden bg-gray-100">
+              <img class="zoom-image h-full w-full object-cover" 
+                   src="./assets/imgs/shorts.jpg" 
+                   alt="Shorts modernos Gusmão Moda Feminina"
+                   referrerPolicy="no-referrer" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute top-4 left-4 rounded-full bg-[#FAF7F2] px-3.5 py-1 text-[10px] font-bold tracking-widest uppercase text-[#AA8961]">Estilo</span>
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="font-serif text-xl font-normal text-[#513E2B] transition-colors group-hover:text-[#BFA17A]">Shorts</h3>
+              <p class="mt-2 text-xs leading-relaxed text-[#6E543A]">Peças em alfaiataria, tecidos planos e jeans com caimento perfeito.</p>
+              <div class="mt-auto pt-6">
+                <a href="https://wa.me/5511962589548?text=Olá!+Gostaria+de+informações+sobre+os+Shorts+da+loja." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold tracking-widest uppercase text-[#BFA17A] transition-colors hover:text-[#513E2B]">
+                  <span>Tenho Interesse</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category Card 4 (Moda Academia) -->
+          <div class="zoom-container group relative flex flex-col overflow-hidden rounded-2xl border border-[#E7DAC1]/40 bg-white shadow-gold-soft transition-all duration-300 hover:border-[#BFA17A]/50 hover:shadow-gold-medium">
+            <div class="relative h-72 w-full overflow-hidden bg-gray-100">
+              <img class="zoom-image h-full w-full object-cover" 
+                   src="./assets/imgs/academia.jpg" 
+                   alt="Moda Fitness Academia Gusmão"
+                   referrerPolicy="no-referrer" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute top-4 left-4 rounded-full bg-[#FAF7F2] px-3.5 py-1 text-[10px] font-bold tracking-widest uppercase text-[#AA8961]">Fitness</span>
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="font-serif text-xl font-normal text-[#513E2B] transition-colors group-hover:text-[#BFA17A]">Moda Academia</h3>
+              <p class="mt-2 text-xs leading-relaxed text-[#6E543A]">Leggings macias, tops e conjuntos leves de alta elasticidade.</p>
+              <div class="mt-auto pt-6">
+                <a href="https://wa.me/5511962589548?text=Olá!+Gostaria+de+informações+sobre+as+peças+de+Academia+fitness." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold tracking-widest uppercase text-[#BFA17A] transition-colors hover:text-[#513E2B]">
+                  <span>Tenho Interesse</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category Card 5 (Lingerie) -->
+          <div class="zoom-container group relative flex flex-col overflow-hidden rounded-2xl border border-[#E7DAC1]/40 bg-white shadow-gold-soft transition-all duration-300 hover:border-[#BFA17A]/50 hover:shadow-gold-medium">
+            <div class="relative h-72 w-full overflow-hidden bg-gray-100">
+              <img class="zoom-image h-full w-full object-cover" 
+                   src="./assets/imgs/lingerie.jpg" 
+                   alt="Lingerie e moda íntima Gusmão"
+                   referrerPolicy="no-referrer" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute top-4 left-4 rounded-full bg-[#FAF7F2] px-3.5 py-1 text-[10px] font-bold tracking-widest uppercase text-[#AA8961]">Íntima</span>
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="font-serif text-xl font-normal text-[#513E2B] transition-colors group-hover:text-[#BFA17A]">Lingerie</h3>
+              <p class="mt-2 text-xs leading-relaxed text-[#6E543A]">Peças rendadas, camisolas de cetim e conjuntos essenciais com muito conforto.</p>
+              <div class="mt-auto pt-6">
+                <a href="https://wa.me/5511962589548?text=Olá!+Gostaria+de+informações+sobre+as+peças+de+Lingerie/Moda+Íntima." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold tracking-widest uppercase text-[#BFA17A] transition-colors hover:text-[#513E2B]">
+                  <span>Tenho Interesse</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category Card 6 (Moda Casual) -->
+          <div class="zoom-container group relative flex flex-col overflow-hidden rounded-2xl border border-[#E7DAC1]/40 bg-white shadow-gold-soft transition-all duration-300 hover:border-[#BFA17A]/50 hover:shadow-gold-medium">
+            <div class="relative h-72 w-full overflow-hidden bg-gray-100">
+              <img class="zoom-image h-full w-full object-cover" 
+                   src="./assets/imgs/casual.jpg" 
+                   alt="Moda Casual dia a dia Gusmão"
+                   referrerPolicy="no-referrer" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute top-4 left-4 rounded-full bg-[#FAF7F2] px-3.5 py-1 text-[10px] font-bold tracking-widest uppercase text-[#AA8961]">Dia a Dia</span>
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="font-serif text-xl font-normal text-[#513E2B] transition-colors group-hover:text-[#BFA17A]">Moda Casual</h3>
+              <p class="mt-2 text-xs leading-relaxed text-[#6E543A]">Blusas leves, t-shirts e calças confortáveis para as produções do seu dia a dia.</p>
+              <div class="mt-auto pt-6">
+                <a href="https://wa.me/5511962589548?text=Olá!+Gostaria+de+informações+sobre+as+peças+de+Moda+Casual." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold tracking-widest uppercase text-[#BFA17A] transition-colors hover:text-[#513E2B]">
+                  <span>Tenho Interesse</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category Card 7 (Novidades) -->
+          <div class="zoom-container group relative flex flex-col overflow-hidden rounded-2xl border border-[#E7DAC1]/40 bg-white shadow-gold-soft transition-all duration-300 hover:border-[#BFA17A]/50 hover:shadow-gold-medium sm:col-span-2 lg:col-span-1 xl:col-span-2">
+            <div class="relative h-72 w-full overflow-hidden bg-gray-100">
+              <img class="zoom-image h-full w-full object-cover" 
+                   src="./assets/imgs/novidades.jpg" 
+                   alt="Lançamentos semanais Gusmão Moda Feminina"
+                   referrerPolicy="no-referrer" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
+              <span class="absolute top-4 left-4 rounded-full bg-[#BFA17A] px-3.5 py-1 text-[10px] font-bold tracking-widest uppercase text-white shadow-sm">Hot News</span>
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="font-serif text-xl font-normal text-[#513E2B] transition-colors group-hover:text-[#BFA17A]">Novidades</h3>
+              <p class="mt-2 text-xs leading-relaxed text-[#6E543A]">As principais tendências e lançamentos exclusivos chegando todas as semanas.</p>
+              <div class="mt-auto pt-6">
+                <a href="https://wa.me/5511962589548?text=Olá!+Quero+entrar+para+o+grupo+VIP+e+receber+as+Novidades+semanais." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold tracking-widest uppercase text-[#BFA17A] transition-colors hover:text-[#513E2B]">
+                  <span>Verificar Lançamentos</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. AVALIAÇÕES DO GOOGLE -->
+    <section id="avaliacoes" class="bg-[#FEF8F8] py-20 border-t border-b border-[#E7DAC1]/30">
+      <div class="mx-auto max-w-7xl px-6 md:px-8">
+        
+        <div class="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:items-center">
+          
+          <!-- Rating badge display Left (Cormorant typeface accents) -->
+          <div class="lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-left gap-4 reveal">
+            <span class="text-xs font-bold tracking-[0.2em] uppercase text-[#BFA17A]">A OPINIÃO DELAS</span>
+            <h2 class="font-serif text-3xl font-normal text-[#513E2B] md:text-4xl">Avaliação Excelência no Google</h2>
+            <div class="h-0.5 w-16 bg-[#BFA17A] rounded lg:self-start"></div>
+            
+            <div class="mt-4 flex flex-col items-center lg:items-start gap-2">
+              <div class="flex items-baseline gap-2.5">
+                <span class="font-serif text-6xl font-semibold text-[#513E2B]">5,0</span>
+                <span class="text-sm font-semibold tracking-wide text-[#AA8961]">de 5 estrelas</span>
+              </div>
+              <div class="flex text-[#BFA17A] gap-1">
+                <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+              <p class="mt-1 text-xs text-[#6E543A]">Baseado em avaliações reais de clientes no Google.</p>
+            </div>
+            
+            <a id="btn-google-rate" href="https://www.google.com/search?q=Gusm%C3%A3o+Moda+Feminina+Guarulhos" target="_blank" rel="noopener noreferrer" class="mt-4 flex items-center justify-center gap-2 rounded-full border border-[#BFA17A] bg-transparent px-6 py-3 text-xs font-bold tracking-widest uppercase text-[#513E2B] transition-all duration-300 hover:bg-[#BFA17A]/10">
+              <span>Nos avalie no Google</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+
+          <!-- Reviews Grid on the Right -->
+          <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6 reveal">
+            
+            <!-- Comment 1 -->
+            <div class="rounded-xl border border-[#E7DAC1]/40 bg-[#FAF7F2] p-6 shadow-gold-soft flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-[#BFA17A]/25 text-sm font-bold text-[#513E2B]">CS</div>
+                  <div>
+                    <h4 class="text-xs font-bold text-[#513E2B]">Clara Souza</h4>
+                    <span class="text-[10px] text-[#AA8961]">Cliente Verificada</span>
+                  </div>
+                </div>
+                <div class="flex text-[#BFA17A] gap-0.5 mb-3">
+                  <span class="text-xs">★★★★★</span>
+                </div>
+                <p class="text-xs leading-relaxed text-[#6E543A] italic">“A loja tem produtos maravilhosos, de alta qualidade. O atendimento é extremamente atencioso, super recomendo para todas!”</p>
+              </div>
+            </div>
+
+            <!-- Comment 2 -->
+            <div class="rounded-xl border border-[#E7DAC1]/40 bg-[#FAF7F2] p-6 shadow-gold-soft flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-[#BFA17A]/25 text-sm font-bold text-[#513E2B]">BM</div>
+                  <div>
+                    <h4 class="text-xs font-bold text-[#513E2B]">Beatriz Mendes</h4>
+                    <span class="text-[10px] text-[#AA8961]">Cliente Verificada</span>
+                  </div>
+                </div>
+                <div class="flex text-[#BFA17A] gap-0.5 mb-3">
+                  <span class="text-xs">★★★★★</span>
+                </div>
+                <p class="text-xs leading-relaxed text-[#6E543A] italic">“Encontrei peças lindas e confortáveis para todos os gostos e tamanhos. Fiquei muito feliz com minha compra e assessoria dos looks.”</p>
+              </div>
+            </div>
+
+            <!-- Comment 3 -->
+            <div class="rounded-xl border border-[#E7DAC1]/40 bg-[#FAF7F2] p-6 shadow-gold-soft flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-[#BFA17A]/25 text-sm font-bold text-[#513E2B]">MA</div>
+                  <div>
+                    <h4 class="text-xs font-bold text-[#513E2B]">Mariana Albuquerque</h4>
+                    <span class="text-[10px] text-[#AA8961]">Cliente Verificada</span>
+                  </div>
+                </div>
+                <div class="flex text-[#BFA17A] gap-0.5 mb-3">
+                  <span class="text-xs">★★★★★</span>
+                </div>
+                <p class="text-xs leading-relaxed text-[#6E543A] italic">“A variedade de produtos é ótima, roupas casuais e elegantes e os preços são justos pela excelente qualidade e modelagem das peças.”</p>
+              </div>
+            </div>
+
+            <!-- Comment 4 -->
+            <div class="rounded-xl border border-[#E7DAC1]/40 bg-[#FAF7F2] p-6 shadow-gold-soft flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-[#BFA17A]/25 text-sm font-bold text-[#513E2B]">FS</div>
+                  <div>
+                    <h4 class="text-xs font-bold text-[#513E2B]">Fernanda Silva</h4>
+                    <span class="text-[10px] text-[#AA8961]">Cliente Verificada</span>
+                  </div>
+                </div>
+                <div class="flex text-[#BFA17A] gap-0.5 mb-3">
+                  <span class="text-xs">★★★★★</span>
+                </div>
+                <p class="text-xs leading-relaxed text-[#6E543A] italic">“Loja simplesmente maravilhosa, peças de ótima qualidade, tecidos incríveis que vestem muito bem e o atendimento é impecável!”</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. LOCALIZAÇÃO -->
+    <section id="localizacao" class="py-20">
+      <div class="mx-auto max-w-7xl px-6 md:px-8">
+        
+        <div class="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:items-center">
+          
+          <!-- Localization Address copy Block -->
+          <div class="lg:col-span-5 flex flex-col items-start gap-6 reveal">
+            <span class="text-xs font-bold tracking-[0.2em] uppercase text-[#BFA17A]">VENHA NOS VISITAR</span>
+            <h2 class="font-serif text-3xl font-normal text-[#513E2B] md:text-4xl text-left">Nossa Loja Física em Guarulhos</h2>
+            <div class="h-0.5 w-16 bg-[#BFA17A] rounded"></div>
+            
+            <p class="text-sm leading-relaxed text-[#6E543A] text-left">
+              Venha nos visitar para conhecer nosso espaço de perto e conferir a qualidade das peças.
+            </p>
+            
+            <div class="flex items-start gap-4 text-left border-l-2 border-[#BFA17A] pl-4 mt-2">
+              <div class="text-[#BFA17A] shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold uppercase tracking-widest text-[#513E2B]">Endereço Oficial</h4>
+                <p class="mt-1 text-xs text-[#6E543A] leading-relaxed">
+                  Estrada do Elenco, 1406<br />
+                  Jardim São Domingos, Guarulhos - SP<br />
+                  CEP 07142-000
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 text-left border-l-2 border-[#BFA17A] pl-4">
+              <div class="text-[#BFA17A] shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold uppercase tracking-widest text-[#513E2B]">Horário de Funcionamento</h4>
+                <p class="mt-1 text-xs text-[#6E543A]">
+                  Segunda a Sábado: 09h às 19h<br />
+                  Domingos e Feriados: Consultar via WhatsApp
+                </p>
+              </div>
+            </div>
+
+            <a id="btn-maps-route" href="https://www.google.com/maps/dir/?api=1&destination=Estrada+do+Elenco%2C+1406+-+Jardim+S%C3%A3o+Domingos%2C+Guarulhos+-+SP%2C+07142-000" target="_blank" rel="noopener noreferrer" class="mt-2 flex items-center justify-center gap-2 rounded-full bg-[#BFA17A] px-7 py-3.5 text-xs font-bold tracking-widest uppercase text-white shadow-md transition-all duration-300 hover:bg-[#AA8961] hover:shadow-lg">
+              <span>Ver Rotas no Google Maps</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+            </a>
+          </div>
+
+          <!-- Embedded Iframe of Google Maps on the Right side -->
+          <div class="lg:col-span-7 reveal">
+            <div class="overflow-hidden rounded-2xl border border-[#E7DAC1] p-3 bg-white shadow-gold-soft">
+              <iframe 
+                class="h-[380px] w-full rounded-xl"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.127453303494!2d-46.4716912!3d-23.4198274!4m2!3m1!1s0x94ce8b8f88bb3e85%3A0xc07a514d8b8e0a3!2sEstr.%20Elenco%2C%201406%20-%20Jardim%20S%C3%A3o%20Domingos%2C%20Guarulhos%20-%20SP%2C%2007142-000!5e0!3m2!1spt-BR!2sbr!4v1717772400000!5m2!1spt-BR!2sbr" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                aria-label="Mapa detalhado da Estrada do Elenco, 1406, Guarulhos">
+              </iframe>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. CONTATO -->
+    <section id="contato" class="bg-[#FEF8F8] py-20 border-t border-[#E7DAC1]/30">
+      <div class="mx-auto max-w-7xl px-6 md:px-8">
+        
+        <div class="flex flex-col items-center text-center gap-4 mb-16 reveal">
+          <span class="text-xs font-bold tracking-[0.2em] uppercase text-[#BFA17A]">CANAIS DE SUPORTE</span>
+          <h2 class="font-serif text-3xl font-normal text-[#513E2B] md:text-4xl lg:text-5xl">Fale Conosco</h2>
+          <div class="h-0.5 w-16 bg-[#BFA17A] rounded mb-2"></div>
+          <p class="max-w-md text-sm text-[#6E543A] leading-relaxed">
+            Dúvidas ou quer fazer uma reserva? Fale direto conosco pelo canal de sua preferência.
+          </p>
+        </div>
+
+        <!-- Contact Options list -->
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3 reveal">
+          
+          <!-- Contact 1 (WhatsApp Direct) -->
+          <div class="rounded-2xl border border-[#E7DAC1]/40 bg-white p-8 shadow-gold-soft text-center flex flex-col items-center group-colors transition-all duration-300 hover:border-[#BFA17A]/50">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-[#BFA17A]/15 text-[#BFA17A] mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </div>
+            <h3 class="font-serif text-xl font-normal text-[#513E2B]">WhatsApp Principal</h3>
+            <p class="mt-2 text-xs text-[#6E543A] leading-relaxed max-w-[200px]">Atendimento imediato, dúvidas de looks e vendas consultivas.</p>
+            <span class="mt-4 font-semibold text-[#513E2B] text-sm hover:text-[#BFA17A]">(11) 96258-9548</span>
+            <a id="btn-contact-whats" href="https://wa.me/5511962589548?text=Olá!+Gostaria+de+atendimento+pelo+WhatsApp." target="_blank" rel="noopener noreferrer" class="mt-6 flex w-full items-center justify-center gap-2 rounded-full border border-[#BFA17A] bg-transparent py-2.5 text-xs font-bold tracking-widest uppercase text-[#513E2B] transition-all duration-300 hover:bg-[#BFA17A]/15">
+              <span>Chamar no Whats</span>
+            </a>
+          </div>
+
+          <!-- Contact 2 (Instagram Direct) -->
+          <div class="rounded-2xl border border-[#E7DAC1]/40 bg-white p-8 shadow-gold-soft text-center flex flex-col items-center group-colors transition-all duration-300 hover:border-[#BFA17A]/50">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-[#BFA17A]/15 text-[#BFA17A] mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </div>
+            <h3 class="font-serif text-xl font-normal text-[#513E2B]">Instagram Oficial</h3>
+            <p class="mt-2 text-xs text-[#6E543A] leading-relaxed max-w-[200px]">Acompanhe looks diários, provadores reais e dicas de moda.</p>
+            <span class="mt-4 font-semibold text-[#513E2B] text-sm hover:text-[#BFA17A]">@gusmaomodafeminina</span>
+            <a id="btn-contact-insta" href="https://www.instagram.com/gusmaomodafeminina/" target="_blank" rel="noopener noreferrer" class="mt-6 flex w-full items-center justify-center gap-2 rounded-full border border-[#BFA17A] bg-transparent py-2.5 text-xs font-bold tracking-widest uppercase text-[#513E2B] transition-all duration-300 hover:bg-[#BFA17A]/15">
+              <span>Seguir no Insta</span>
+            </a>
+          </div>
+
+          <!-- Contact 3 (VIP Group Update) -->
+          <div class="rounded-2xl border border-[#E7DAC1]/40 bg-white p-8 shadow-gold-soft text-center flex flex-col items-center group-colors transition-all duration-300 hover:border-[#BFA17A]/50">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-[#BFA17A]/15 text-[#BFA17A] mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="font-serif text-xl font-normal text-[#513E2B]">Grupo VIP de Ofertas</h3>
+            <p class="mt-2 text-xs text-[#6E543A] leading-relaxed max-w-[200px]">Garanta coleções em primeira mão e descontos exclusivos no WhatsApp.</p>
+            <span class="mt-4 font-semibold text-[#513E2B] text-sm hover:text-[#BFA17A]">Entrar Gratuitamente</span>
+            <a id="btn-contact-group" href="https://chat.whatsapp.com/D5iQf7j2S2ZIIJXyOWJezj?s=cl&p=i&mlu=0&ilr=0&amv=1&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnSQ_jDtRPghAy80MU4CvM8X2KrQq3v9FsIvlPQWGAl6fgCGcPY1E5Uib978g_aem_upsu4M_zN0TdOR7rK4io3w" target="_blank" rel="noopener noreferrer" class="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-[#BFA17A] py-2.5 text-xs font-bold tracking-widest uppercase text-white shadow-sm transition-all duration-300 hover:bg-[#AA8961]">
+              <span>Entrar no Grupo</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. BOTÕES FLUTUANTES CONTATOS (FAB) -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3 md:bottom-8 md:right-8">
+      
+      <!-- Submenu container connected to FAB state -->
+      <div id="fab-menu" class="hidden-fab flex flex-col items-end gap-3 mb-2">
+        
+        <!-- Action 1 - Scroll Back to Top -->
+        <a id="back-to-top" href="#" class="group flex items-center gap-3 opacity-50 pointer-events-none transition-all duration-300">
+          <span class="rounded bg-[#513E2B] px-3 py-1.5 text-[10px] font-bold tracking-widest uppercase text-white shadow-md transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">Topo da página</span>
+          <div class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-[#513E2B] shadow-md hover:bg-[#E7DAC1]/50 border border-[#E7DAC1]/50 transition-transform hover:-translate-y-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+          </div>
+        </a>
+
+        <!-- Action 2 - Join VIP WhatsApp Group -->
+        <a id="fab-group-join" href="https://chat.whatsapp.com/D5iQf7j2S2ZIIJXyOWJezj?s=cl&p=i&mlu=0&ilr=0&amv=1&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnSQ_jDtRPghAy80MU4CvM8X2KrQq3v9FsIvlPQWGAl6fgCGcPY1E5Uib978g_aem_upsu4M_zN0TdOR7rK4io3w" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3">
+          <span class="rounded bg-[#513E2B] px-3 py-1.5 text-[10px] font-bold tracking-widest uppercase text-white shadow-md transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">Grupo VIP WhatsApp</span>
+          <div class="flex h-11 w-11 items-center justify-center rounded-full bg-[#FAF7F2] text-[#BFA17A] border border-[#E7DAC1]/60 shadow-md hover:bg-[#E7DAC1]/30 transition-transform hover:-translate-y-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+        </a>
+
+        <!-- Action 3 - Instagram page -->
+        <a id="fab-instagram-visit" href="https://www.instagram.com/gusmaomodafeminina/" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3">
+          <span class="rounded bg-[#513E2B] px-3 py-1.5 text-[10px] font-bold tracking-widest uppercase text-white shadow-md transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">Siga no Instagram</span>
+          <div class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-[#BFA17A] border border-[#E7DAC1]/60 shadow-md hover:bg-[#E7DAC1]/30 transition-transform hover:-translate-y-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </div>
+        </a>
+
+        <!-- Action 4 - Live Direct Chat WhatsApp -->
+        <a id="fab-whats-chat" href="https://wa.me/5511962589548?text=Olá!+Desejo+tirar+uma+dúvida+pelo+atendimento+on-line+da+loja." target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3">
+          <span class="rounded bg-[#513E2B] px-3 py-1.5 text-[10px] font-bold tracking-widest uppercase text-white shadow-md transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">Falar no WhatsApp</span>
+          <div class="flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366] text-white shadow-md hover:bg-[#20ba59] transition-transform hover:-translate-y-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Main FAB pulsating trigger button -->
+      <button id="fab-main-btn" class="pulse-gold flex h-14 w-14 items-center justify-center rounded-full bg-[#BFA17A] text-white shadow-lg transition-transform hover:scale-105 active:scale-95" aria-label="Opções de contato e suporte">
+        
+        <!-- Contact message bubble main toggle icon -->
+        <svg id="fab-icon-default" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.37C4.616 19.344 3 20.25 3 20.25s2.43.08 4.675-1.077c1.332.651 2.81.1c4.325-.173 1.332.1 4.325.1z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01" />
+        </svg>
+
+        <!-- Close menu toggle icon when menu is visible -->
+        <svg id="fab-icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+
+      </button>
+
+    </div>
+
+    <!-- 9. FOOTER -->
+    <footer class="bg-[#513E2B] text-[#FAF7F2] border-t border-[#6E543A] py-16">
+      <div class="mx-auto max-w-7xl px-6 md:px-8">
+        
+        <div class="grid grid-cols-1 gap-12 md:grid-cols-4">
+          
+          <!-- Column A - Store Name and logo details -->
+          <div class="flex flex-col items-start gap-4 md:col-span-2">
+            <a href="#inicio" class="flex flex-col items-start gap-0.5">
+              <span class="font-serif text-3xl font-semibold tracking-wide text-[#FAF7F2]">Gusmão</span>
+              <span class="text-[10px] font-medium tracking-[0.25em] uppercase text-[#E7DAC1]/80">Moda Feminina</span>
+            </a>
+            <p class="mt-2 text-xs leading-relaxed text-[#DAC3A4] max-w-xs">
+              “Beleza e estilo em cada detalhe.”<br />
+              Dedicamo-nos a curar as peças de moda feminina mais bonitas, duráveis e confortáveis para inspirar a confiança em toda mulher.
+            </p>
+          </div>
+
+          <!-- Column B - Quick links inside lists -->
+          <div class="flex flex-col items-start gap-3">
+            <h4 class="text-xs font-bold uppercase tracking-widest text-[#FAF7F2]">Links Rápidos</h4>
+            <div class="flex flex-col gap-2 text-xs text-[#DAC3A4]">
+              <a href="#inicio" class="hover:text-white transition-colors duration-200">Início</a>
+              <a href="#sobre" class="hover:text-white transition-colors duration-200">Sobre Nós</a>
+              <a href="#produtos" class="hover:text-white transition-colors duration-200">Coleção & Categorias</a>
+              <a href="#avaliacoes" class="hover:text-white transition-colors duration-200">Avaliações Google</a>
+              <a href="#localizacao" class="hover:text-white transition-colors duration-200">Loja Física</a>
+            </div>
+          </div>
+
+          <!-- Column C - Direct contact details list -->
+          <div class="flex flex-col items-start gap-3">
+            <h4 class="text-xs font-bold uppercase tracking-widest text-[#FAF7F2]">Suporte e Vendas</h4>
+            <div class="flex flex-col gap-2 text-xs text-[#DAC3A4]">
+              <p class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>(11) 96258-9548</span>
+              </p>
+              <p class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                <span>@gusmaomodafeminina</span>
+              </p>
+              <p class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Jardim São Domingos, Guarulhos</span>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Copyright Row and bottom borders -->
+        <div class="mt-14 pt-8 border-t border-[#6E543A] flex flex-col sm:flex-row items-center justify-between gap-4 text-center">
+          <p class="text-[10px] text-[#DAC3A4] leading-relaxed">
+            &copy; 2026 Gusmão Moda Feminina. Todos os direitos reservados.
+          </p>
+          <p class="text-[9px] text-[#DAC3A4]/60">
+            Hospedado via GitHub Pages &bull; Conforto, Amor e Estilo em Guarulhos - SP
+          </p>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- Link to basic Javascript interactive rules -->
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>

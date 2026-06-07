@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+/* Typography from Google Fonts - Cormorant Garamond (refined serif) and Montserrat (modern sans-serif) */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Montserrat", sans-serif;
+  
+  /* Natural Tones Brand Core Palette */
+  --bg: #FAF9F6;
+  --gold: #C5A059;
+  --ink: #2D2926;
+  --soft-beige: #EADBC8;
+  --white: #FFFFFF;
+  --accent-pink: #F5E6E8;
+  
+  /* Map legacy theme colors to the Natural Tones equivalents for absolute layout parity */
+  --color-gold-50: #FAF9F6;
+  --color-gold-100: #EADBC8;
+  --color-gold-200: #DFCEB9;
+  --color-gold-300: #D0BA9C;
+  --color-gold-400: #C5A059;
+  --color-gold-500: #C5A059; /* Brand Core Gold */
+  --color-gold-600: #B28E4E;
+  --color-gold-700: #9B773E;
+  --color-gold-800: #5C4725;
+  --color-gold-900: #2D2926; /* Brand Core Ink */
+  
+  --color-rose-50: #FAF9F6;
+  --color-rose-100: #F5E6E8; /* Soft Accent Pink */
+  --color-rose-300: #D8BEDF;
+}
+
+/* Base resets & styles matching Natural Tones design details */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-serif-luxury {
+  font-family: var(--font-serif);
+}
+
+/* Luxury Card styles from Natural Tones theme instructions */
+.natural-card {
+  background: var(--white);
+  border-radius: 24px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  border: 1px solid rgba(0,0,0,0.03);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.natural-card:hover {
+  box-shadow: 0 8px 30px rgba(197, 160, 89, 0.08);
+  border-color: rgba(197, 160, 89, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Luxury Hero gradient & card */
+.hero-gradient {
+  background: linear-gradient(135deg, var(--white) 0%, var(--soft-beige) 100%);
+  border-radius: 32px;
+  border: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+/* Custom shadow patterns for a boutique premium look */
+.shadow-gold-soft {
+  box-shadow: 0 4px 30px rgba(197, 160, 89, 0.08);
+}
+
+.shadow-gold-medium {
+  box-shadow: 0 8px 40px rgba(45, 41, 38, 0.04);
+}
+
+/* Category item stylings corresponding to theme requirements */
+.category-luxury-icon {
+  background-color: var(--accent-pink) !important;
+  border-radius: 8px;
+}
+
+/* Elegant custom luxury primary buttons with soft natural tones */
+.btn-primary-luxury {
+  background-color: var(--gold);
+  color: var(--white);
+  border-radius: 100px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-primary-luxury:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-outline-luxury {
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
+  border-radius: 100px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-luxury:hover {
+  background-color: rgba(197, 160, 89, 0.06);
+  transform: translateY(-1px);
+}
+
+/* Smooth zoom transition for products */
+.zoom-container {
+  overflow: hidden;
+}
+
+.zoom-image {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.zoom-container:hover .zoom-image {
+  transform: scale(1.04);
+}
+
+/* Scroll Fade Animations classes for viewport reveals */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Menu items indicator animation */
+.menu-link {
+  position: relative;
+}
+
+.menu-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.menu-link:hover::after {
+  width: 100%;
+}
+
+/* Floating Action Button Submenu Animation */
+#fab-menu {
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#fab-menu.hidden-fab {
+  opacity: 0;
+  transform: scale(0.85) translateY(20px);
+  pointer-events: none;
+}
+
+#fab-menu.visible-fab {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: auto;
+}
+
+/* Pulse animation for the primary floating WhatsApp link */
+.pulse-gold {
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(197, 160, 89, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(197, 160, 89, 0);
+  }
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--soft-beige);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
